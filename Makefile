@@ -7,8 +7,9 @@ SRCS = srcs/main.c \
 		srcs/argv_parsing.c \
 		srcs/argv_check.c \
 		srcs/algo.c \
-		srcs/free.c \
 		srcs/algo_spe.c \
+		srcs/algo_utils.c \
+		srcs/clean_exit.c \
 		srcs/swap_sa.c \
 		srcs/swap_ra.c \
 		srcs/swap_rb.c \
@@ -31,7 +32,7 @@ all: $(NAME)
 ${NAME}:
 	make -C ${LIBFTPATH}
 	mv $(LIBFTPATH)${LIBFTNAME} ${LIBFTNAME}
-	${CC} ${CFLAGS} ${DEBUG} ${SRCS} ${LIBFTNAME} -o ${NAME}
+	${CC} ${CFLAGS} ${SRCS} ${LIBFTNAME} -o ${NAME}
 
 clean:
 	rm -rf *.o

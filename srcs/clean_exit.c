@@ -1,23 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap_rr.c                                          :+:      :+:    :+:   */
+/*   clean_exit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsorabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 09:45:37 by tsorabel          #+#    #+#             */
-/*   Updated: 2022/11/25 17:42:55 by tsorabel         ###   ########.fr       */
+/*   Updated: 2022/11/25 17:57:53 by tsorabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"../include/push_swap.h"
 
-void	swap_rr(t_data *gl)
+void	free_tab(char **tab)
 {
-	if (gl->ab[1] || gl->bb[1])
-	{
-		swap_ra(gl);
-		swap_rb(gl);
-		ft_putstr_fd("rr\n", 1);
-	}
+	int	i;
+
+	i = -1;
+	while (tab[++i])
+		free(tab[i]);
+	free(tab);
+}
+
+void	exit_free(t_data *gl)
+{
+	free(gl->a);
+	free(gl->b);
+	free_tab(gl->ab);
+	free(gl->bb);
+	free(gl->t);
+	free(gl->tb);
+	exit(0);
 }

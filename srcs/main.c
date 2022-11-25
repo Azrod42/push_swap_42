@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tsorabel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/23 09:45:37 by tsorabel          #+#    #+#             */
+/*   Updated: 2022/11/25 17:41:30 by tsorabel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include"../include/push_swap.h"
 
-void argc_2(char **argv, t_data *gl)
+void	argc_2(char **argv, t_data *gl)
 {
 	int	i;
 
@@ -10,16 +22,20 @@ void argc_2(char **argv, t_data *gl)
 	gl->argc = i;
 }
 
+int	exit_error(void)
+{
+	ft_printf("Error\n");
+	exit (0);
+}
+
 int	main(int argc, char **argv)
 {
 	t_data	gl;
 	char	**av;
 	char	*temp;
+
 	if (argc == 1 || argv[1][0] == '\0')
-	{
-		ft_printf("Error\n");
-		exit (0);
-	}
+		exit_error();
 	else if (argc == 2)
 	{
 		temp = ft_strjoin("./pushswap ", argv[1]);
@@ -38,7 +54,9 @@ int	main(int argc, char **argv)
 	init_list_binary(&gl);
 	algo_radix(&gl);
 	exit_free(&gl);
-	system("leaks --atExit push_swap"); 	/*
+}
+
+	/*
 	int i;	
 	i = -1;
 	ft_printf("------------------------\n");
@@ -53,4 +71,3 @@ int	main(int argc, char **argv)
 		ft_printf("%s\t\t%s\n", gl.ab[i], gl.bb[i]);
 	ft_printf("------------------------\n");
 	*/
-}

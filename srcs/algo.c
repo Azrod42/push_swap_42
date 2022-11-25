@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algo.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tsorabel <tsorabel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tsorabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 12:36:42 by tsorabel          #+#    #+#             */
-/*   Updated: 2022/11/24 18:04:16 by tsorabel         ###   ########.fr       */
+/*   Updated: 2022/11/25 17:37:16 by tsorabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	check_next(t_data *gl)
 	return (0);
 }
 
-void check_digit(int *i, t_data *gl, int *j, int *nbra)
+void	check_digit(int *i, t_data *gl, int *j, int *nbra)
 {
 	if (gl->ab[*i - *j][gl->maxlen - 1] == 'O')
 	{

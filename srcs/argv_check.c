@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   argv_check.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tsorabel <tsorabel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tsorabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 08:23:48 by tsorabel          #+#    #+#             */
-/*   Updated: 2022/11/24 13:03:52 by tsorabel         ###   ########.fr       */
+/*   Updated: 2022/11/25 17:25:26 by tsorabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	check_char(char **argv)
 {
 	int	i;
 	int	j;
-	int neg;
+	int	neg;
 
 	i = 0;
 	neg = 0;

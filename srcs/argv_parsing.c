@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   argv_parsing.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tsorabel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/23 09:45:37 by tsorabel          #+#    #+#             */
+/*   Updated: 2022/11/25 17:49:16 by tsorabel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include"../include/push_swap.h"
 
 void	fill_binary(t_data *gl)
 {
 	int	i;
-	int k;
+	int	k;
 
 	i = -1;
 	k = 0;
@@ -24,7 +36,7 @@ void	init_list_binary(t_data *gl)
 
 	i = -1;
 	gl->maxlen = 0;
-	while(++i < gl->argc)
+	while (++i < gl->argc)
 	{
 		gl->ab[i] = ft_convet_base(gl->a[i], "O1");
 		if ((int)ft_strlen(gl->ab[i]) > gl->maxlen)
@@ -44,7 +56,7 @@ void	set_b_to_a(t_data *gl)
 
 void	simplify_list(t_data *gl)
 {
-	t_simp i;
+	t_simp	i;
 
 	i.modif = 1;
 	i.pos = -1;
@@ -55,7 +67,7 @@ void	simplify_list(t_data *gl)
 		i.min = 2147483647;
 		while (++i.i < gl->argc)
 		{
-			if (gl->a[i.i] <= i.min && gl->a[i.i] != -79787778)
+			if (gl->a[i.i] <= i.min && gl->a[i.i] != MIN)
 			{
 				i.min = gl->a[i.i];
 				i.min_pos = i.i;
@@ -65,7 +77,7 @@ void	simplify_list(t_data *gl)
 		if (i.modif != 0)
 		{
 			gl->b[i.min_pos] = ++i.pos;
-			gl->a[i.min_pos] = -79787778;
+			gl->a[i.min_pos] = MIN;
 		}
 	}
 }
@@ -83,6 +95,6 @@ void	init_list(int argc, char **argv, t_data *gl)
 	gl->argc = argc - 1;
 	i = -1;
 	while (++i < argc -1)
-		gl->a[i] = atoi(argv[i + 1]);
+		gl->a[i] = ft_atoi(argv[i + 1]);
 	gl->a[i] = 0;
 }

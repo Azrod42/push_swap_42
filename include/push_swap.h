@@ -1,8 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tsorabel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/23 09:45:37 by tsorabel          #+#    #+#             */
+/*   Updated: 2022/11/25 18:06:04 by tsorabel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
 # include"../libft/libft.h"
-# define BUF 100
+# define BUF 1000
+# define MIN -2147473648
 
 typedef struct s_data
 {
@@ -36,7 +49,10 @@ void	init_list_binary(t_data *gl);
 void	fill_binary(t_data *gl);
 void	algo_radix(t_data *gl);
 void	tree_digit(t_data *gl);
-void 	redirect_tree_five(t_data *gl);
+void	redirect_tree_five(t_data *gl);
+void	set_tree2(t_data *gl, int u, int d, int e);
+int		nbr(char *str);
+void	set_tree(t_data *gl);
 int		swap_sa(t_data *gl);
 int		swap_sb(t_data *gl);
 int		swap_ss(t_data *gl);
