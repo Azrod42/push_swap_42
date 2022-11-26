@@ -6,7 +6,7 @@
 /*   By: tsorabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 09:45:37 by tsorabel          #+#    #+#             */
-/*   Updated: 2022/11/25 17:49:16 by tsorabel         ###   ########.fr       */
+/*   Updated: 2022/11/26 12:43:59 by tsorabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,9 +90,9 @@ void	init_list(int argc, char **argv, t_data *gl)
 	gl->b = malloc(sizeof(int) * (argc));
 	gl->ab = malloc(sizeof(char *) * (argc + BUF));
 	gl->bb = malloc(sizeof(char *) * (argc + BUF));
-	gl->t = malloc(sizeof(char *) * (argc + BUF));
-	gl->tb = malloc(sizeof(char *) * (argc + BUF));
 	gl->argc = argc - 1;
+	gl->argca = argc - 1;
+	gl->argcb = 0;
 	i = -1;
 	while (++i < argc -1)
 		gl->a[i] = ft_atoi(argv[i + 1]);

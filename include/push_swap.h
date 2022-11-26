@@ -6,7 +6,7 @@
 /*   By: tsorabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 09:45:37 by tsorabel          #+#    #+#             */
-/*   Updated: 2022/11/25 18:06:04 by tsorabel         ###   ########.fr       */
+/*   Updated: 2022/11/26 12:24:54 by tsorabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 
 # include"../libft/libft.h"
 # define BUF 1000
-# define MIN -2147473648
+# define MIN -214747648
 
 typedef struct s_data
 {
 	int		argc;
+	int		argca;
+	int		argcb;
 	int		*a;
 	int		*b;
 	char	**ab;

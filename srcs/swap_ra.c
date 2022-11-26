@@ -6,7 +6,7 @@
 /*   By: tsorabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 09:45:37 by tsorabel          #+#    #+#             */
-/*   Updated: 2022/11/25 17:42:31 by tsorabel         ###   ########.fr       */
+/*   Updated: 2022/11/26 12:34:20 by tsorabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,16 @@
 
 void	swap_ra(t_data *gl)
 {
-	int	i;
+	int		i;
+	char	*temp;
 
 	i = -1;
 	if (gl->ab[1])
 	{
-		while (gl->ab[++i])
-			gl->t[i] = gl->ab[i];
-		gl->t[i] = NULL;
-		gl->ab[i - 1] = gl->ab[0];
-		i = -1;
-		while (gl->t[++i])
-			gl->ab[i - 1] = gl->t[i];
-		gl->ab[i] = NULL;
+		temp = gl->ab[0];
+		while (++i < gl->argca)
+			gl->ab[i] = gl->ab[i + 1];
+		gl->ab[i - 1] = temp;
 		ft_putstr_fd("ra\n", 1);
 	}
 }

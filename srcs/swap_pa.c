@@ -6,12 +6,34 @@
 /*   By: tsorabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 09:45:37 by tsorabel          #+#    #+#             */
-/*   Updated: 2022/11/25 17:41:40 by tsorabel         ###   ########.fr       */
+/*   Updated: 2022/11/26 12:32:41 by tsorabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"../include/push_swap.h"
 
+void	swap_pa(t_data *gl)
+{
+	int	i;
+
+	i = 0;
+	if (gl->bb[0])
+	{
+		while (gl->ab[i])
+			i++;
+		while (--i >= 0)
+			gl->ab[i + 1] = gl->ab[i];
+		gl->ab[0] = gl->bb[0];
+		i = -1;
+		while (gl->bb[++i])
+			gl->bb[i] = gl->bb[i + 1];
+		gl->argca += 1;
+		gl->argcb -= 1;
+		ft_putstr_fd("pa\n", 1);
+	}
+}
+
+/*
 void	swap_pa(t_data *gl)
 {
 	int	i;
@@ -40,3 +62,4 @@ void	swap_pa(t_data *gl)
 		ft_putstr_fd("pa\n", 1);
 	}
 }
+*/
