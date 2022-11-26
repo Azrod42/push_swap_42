@@ -6,7 +6,7 @@
 /*   By: tsorabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 09:45:37 by tsorabel          #+#    #+#             */
-/*   Updated: 2022/11/26 13:49:51 by tsorabel         ###   ########.fr       */
+/*   Updated: 2022/11/26 14:39:26 by tsorabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int	main(int argc, char **argv)
 	init_list_binary(&gl);
 	algo_radix(&gl);
 	exit_free(&gl);
-
+}
 
 /*
 	int i;	
@@ -72,5 +72,4 @@ int	main(int argc, char **argv)
 	while(++i < gl.argc)
 		ft_printf("%s\t\t%s\n", gl.ab[i], gl.bb[i]);
 	ft_printf("------------------------\n");
-	*/
-}
+*/

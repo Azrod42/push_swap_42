@@ -6,7 +6,7 @@
 /*   By: tsorabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 09:45:37 by tsorabel          #+#    #+#             */
-/*   Updated: 2022/11/26 12:38:46 by tsorabel         ###   ########.fr       */
+/*   Updated: 2022/11/26 14:39:08 by tsorabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ void	swap_rrb2(t_data *gl)
 			gl->bb[i] = gl->bb[i - 1];
 		gl->bb[i] = temp;
 	}
-
 }
 
 void	swap_rrr(t_data *gl)
