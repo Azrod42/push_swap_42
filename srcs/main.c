@@ -6,7 +6,7 @@
 /*   By: tsorabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 09:45:37 by tsorabel          #+#    #+#             */
-/*   Updated: 2022/11/26 12:43:08 by tsorabel         ###   ########.fr       */
+/*   Updated: 2022/11/26 13:49:51 by tsorabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	main(int argc, char **argv)
 	set_b_to_a(&gl);
 	init_list_binary(&gl);
 	algo_radix(&gl);
-	//exit_free(&gl);
+	exit_free(&gl);
 
 
 /*

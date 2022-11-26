@@ -6,7 +6,7 @@
 /*   By: tsorabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 09:45:37 by tsorabel          #+#    #+#             */
-/*   Updated: 2022/11/26 12:43:59 by tsorabel         ###   ########.fr       */
+/*   Updated: 2022/11/26 14:06:53 by tsorabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 void	fill_binary(t_data *gl)
 {
-	int	i;
-	int	k;
+	int		i;
+	int		k;
+	char	*temp;
 
 	i = -1;
 	k = 0;
@@ -26,7 +27,11 @@ void	fill_binary(t_data *gl)
 	while (++i < gl->argc)
 	{
 		while ((int)ft_strlen(gl->ab[i]) < k)
-			gl->ab[i] = ft_strjoin("O", gl->ab[i]);
+		{
+			temp = ft_strjoin("O", gl->ab[i]);
+			free(gl->ab[i]);
+			gl->ab[i] = temp;
+		}
 	}
 }
 
@@ -86,10 +91,10 @@ void	init_list(int argc, char **argv, t_data *gl)
 {
 	int	i;
 
-	gl->a = malloc(sizeof(int) * (argc));
-	gl->b = malloc(sizeof(int) * (argc));
-	gl->ab = malloc(sizeof(char *) * (argc + BUF));
-	gl->bb = malloc(sizeof(char *) * (argc + BUF));
+	gl->a = malloc(sizeof(int) * (argc - 1));
+	gl->b = malloc(sizeof(int) * (argc - 1));
+	gl->ab = malloc(sizeof(char *) * (argc));
+	gl->bb = malloc(sizeof(char *) * (argc));
 	gl->argc = argc - 1;
 	gl->argca = argc - 1;
 	gl->argcb = 0;

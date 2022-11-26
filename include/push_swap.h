@@ -6,7 +6,7 @@
 /*   By: tsorabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 09:45:37 by tsorabel          #+#    #+#             */
-/*   Updated: 2022/11/26 12:24:54 by tsorabel         ###   ########.fr       */
+/*   Updated: 2022/11/26 13:30:28 by tsorabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define PUSH_SWAP_H
 
 # include"../libft/libft.h"
-# define BUF 1000
 # define MIN -214747648
 
 typedef struct s_data
@@ -26,8 +25,6 @@ typedef struct s_data
 	int		*b;
 	char	**ab;
 	char	**bb;
-	char	**t;
-	char	**tb;
 	int		maxlen;
 	int		u;
 	int		d;
