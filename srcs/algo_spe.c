@@ -6,7 +6,7 @@
 /*   By: tsorabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 15:37:25 by tsorabel          #+#    #+#             */
-/*   Updated: 2022/11/25 18:01:02 by tsorabel         ###   ########.fr       */
+/*   Updated: 2022/11/26 14:21:10 by tsorabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,5 +78,5 @@ void	redirect_tree_five(t_data *gl)
 		tree_digit(gl);
 	if (gl->argc == 5)
 		five_digit(gl);
-	exit(0);
+	exit_free(gl);
 }
